@@ -1,0 +1,71 @@
+@import './default.less';
+@import './mixin.less';
+
+@media screen and (max-width: @mobile-screen) {
+  .mobile-hide {
+    display: none!important;
+  }
+  .nav-bar {
+    flex-direction: column!important;
+    .left-conner {
+      .logo-nav {
+        img {
+          height: 45px;
+          width: auto;
+        }
+      }
+    }
+    .nav-icons {
+      li {
+        font-size: 14px;
+        padding: 5px 12px;
+        span {
+          font-size: 22px;
+        }
+      }
+    }
+    .mid-conner {
+      justify-content: space-around!important;
+    }
+    .username {
+      display: none;
+    }
+    .rightContainer {
+      // .username {
+      //   display: none;
+      // }
+      .ant-menu-submenu-title {
+        // height: 72px;
+        padding: 0!important;
+      }
+      .ant-avatar {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+      }
+    }
+  }
+  .mobile-search-bar {
+    width: 100%;
+    padding: 5px;
+  }
+  .ant-btn.info,
+  .ant-btn.secondary-custom{
+    margin-bottom: 5px;
+  }
+  .ant-table-thead > tr > th, .ant-table-tbody > tr > td, .ant-table tfoot > tr > th, .ant-table tfoot > tr > td{
+    padding: 10px 5px;
+  }
+  .ant-btn.secondary,
+  .ant-btn.primary{
+      display: block;
+      width: 100%;
+  }
+  .ant-col-offset-4{
+    margin-left: 0;
+  }
+  .switch-grp{
+    margin-bottom: 10px;
+  }
+}
+

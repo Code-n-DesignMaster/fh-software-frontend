@@ -1,0 +1,54 @@
+import Document, {
+  DocumentContext,
+  Html,
+  Main,
+  Head,
+  NextScript
+} from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
+
+export default class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
+
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />)
+        });
+
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        )
+      };
+    } finally {
+      sheet.seal();
+    }
+  }
+
+  render() {
+    return (
+      <Html>
+        <Head>
+          <link rel="icon" href="/logo.png" sizes="512x512" />
+          <link href="/fonts/Juana/stylesheet.css" rel="stylesheet" />
+          <link href="/fonts/HenriDidot/stylesheet.css" rel="stylesheet" />
+          <link href="/fonts/GothamGreek/stylesheet.css" rel="stylesheet" />
+        </Head>
+        <body>
+          <Main />
+          <div id="modal" />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}

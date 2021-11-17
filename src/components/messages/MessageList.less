@@ -1,0 +1,107 @@
+@import '../../../style/vars.less';
+.message-list {
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+}
+.message-list-container {
+  padding: 10px;
+}
+.sub-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.5);
+  // opacity: 0.5;
+}
+.mess-recipient {
+  width: 100%;
+  // display: flex;
+  display: none;
+  align-items: center;
+  background: #dbdbdb;
+  position: absolute;
+  height: 48px;
+  top: 0;
+  left: 0;
+  img {
+    width: 40px;
+    border-radius: 50%;
+    margin: 4px;
+  }
+}
+
+.message-list {
+  .ant-drawer {
+    position: 'absolute';
+    bottom: '52px';
+    z-index: 0;
+
+    .ant-drawer-header {
+      border-radius: 10px 10px 0 0;
+      background: #dbdbdb;
+      border-bottom: none;
+    }
+
+    .ant-drawer-body {
+      background: #dbdbdb;
+      padding: 0 10px 50px;
+
+      .medie-content {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        background: white;
+        overflow: auto;
+
+        .media-card {
+          padding: 20px 10px;
+          .image{
+            text-align: center;
+            img {
+            border-radius: 0.5em;
+            height: 10em;
+            max-width: 100%;
+            object-fit: contain;
+            @media screen and (max-width: @tablet-screen) {
+              height: 8em;
+            }
+          }
+        }
+        }
+        .media-card:hover {
+          background: #accdf6;
+          cursor: pointer;
+          border-radius: 10px;
+        }
+        
+        .media-card.active {
+          background: #accdf6;
+          border-radius: 10px;
+        }
+
+        .add-tip {
+          position: absolute;
+          bottom: 12px;
+          width: 140px;
+          height: 30px;
+          background: #eaeaea;
+          border-radius: 5px;
+          padding: 4px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .sub-text {
+    font-size: 14px;
+  }
+}

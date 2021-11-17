@@ -1,0 +1,313 @@
+@import '../../style/vars';
+@import '../../style/default';
+
+.register-box {
+  &.login-box .login-content.left {
+    background-size: 85%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .ant-select-selector {
+    background-color: @light-blue!important;
+    height: 48px!important;
+    .ant-select-selection-item {
+      line-height: 48px!important;
+    }
+  }
+  .ant-form-item {
+    margin: 0;
+  }
+}
+
+.model-photo-verification {
+  .ant-form-item-control {
+    text-align: left;
+  }
+  .ant-form-item-label {
+    font-weight: 600;
+  }
+  .ant-upload-select.ant-upload-select-picture-card {
+    border-radius: 50%;
+    border: 2px solid @light-color;
+    background-image: url('/placeholder-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    img {
+      border-radius: 50%;
+      margin: 0;
+    }
+    .anticon-camera {
+      font-size: 18px;
+      padding: 8px;
+      background-color: @theme-color;
+      color: @white;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 15px;
+      right: -5px;
+    }
+  }
+}
+
+.login-box {
+  max-width: 1100px;
+  margin: 50px auto;
+  .title {
+    font-size: 24px;
+    font-weight: bolder;
+    margin: 20px 0;
+    font-family: 'Merriweather Sans Bold';
+  }
+  Input {
+    height: 50px;
+    font-size: 16px;
+  }
+  Button.login-form-button {
+    height: 50px;
+    font-size: 16px;
+    color: @black;
+    margin-bottom: 15px;
+  }
+
+  .login-content {
+    padding: 20px 40px 20px;
+    position: relative;
+    min-height: 550px;
+    margin: 0 auto;
+    max-width: 1100px;
+    @media (max-width: @mobile-screen) {
+      padding: unset;
+    }
+    ul {
+      li {
+        font-weight: 600;
+        padding: 5px 5px 5px 10px;
+      }
+    }
+    //model
+    &.left {
+      background-size: 70%;
+      background-repeat: no-repeat;
+      background-position: 50% 10%;
+      @media (max-width: @mobile-screen) {
+        display: none;
+      }
+      &.contact {
+        background-image: url('/ct-bg.jpg');
+      }
+    }
+    //member
+    &.right {
+      Button.login-form-button {
+        width: 100%;
+        background-image: linear-gradient(0deg,#773dbd,#6b37aa);
+        border-color: @theme-color;
+        color: @white;
+      }
+      .title {
+        h3 {
+          margin-top: 30px;
+          font-size: 28px;
+          font-weight: 700;
+          text-align: center;
+          font-family: 'Merriweather Sans Bold'
+        }
+      }
+      a {
+        font-weight: 600;
+        color: @theme-color
+      }
+      .ant-checkbox-wrapper .ant-checkbox-inner,
+      .ant-checkbox .ant-checkbox-inner {
+        border: 1.5px solid @white;
+        background-color: @theme-color;
+      }
+      .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+      .ant-checkbox:hover .ant-checkbox-inner {
+        border: 1.5px solid @white;
+      }
+      .btn-primary.ant-btn {
+        color: @white;
+        background-image: linear-gradient(0deg,#773dbd,#6b37aa);
+        box-shadow: 0 5px 10px rgba(50,50,50,0.2);
+      }
+    }
+  }
+}
+
+.form {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin: -160px 0 0 -160px;
+  width: 320px;
+  height: 320px;
+  padding: 36px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.08);
+
+  button {
+    width: 100%;
+  }
+
+  p {
+    color: rgb(204, 204, 204);
+    text-align: center;
+    margin-top: 16px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 40px;
+    margin-right: 8px;
+  }
+
+  span {
+    vertical-align: text-bottom;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 700;
+    color: @primary-color;
+    .text-gradient();
+  }
+}
+
+.ant-spin-container,
+.ant-spin-nested-loading {
+  height: 100%;
+}
+
+.error-message {
+  color: @error-color;
+}
+
+.forgot-box {
+  background-color: #000000;
+  color: @white;
+  margin: 80px 30px;
+  padding: 20px;
+  h2,
+  h4 {
+    color: @white;
+  }
+  @media (max-width: @mobile-screen) {
+    .forgot-password {
+      margin: 40px auto 0;
+    }
+
+    .forgot-form {
+      .ant-form-item {
+        width: 300px;
+      }
+    }
+  }
+}
+
+.forgot-form {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 70px 0;
+  align-items: center;
+  justify-content: center;
+  .ant-form-item {
+    margin-bottom: 10px;
+    width: 400px;
+    Input {
+      text-align: center;
+    }
+  }
+  Button {
+    width: 100%;
+    color: @black;
+  }
+}
+
+.switch-btn {
+  display: flex;
+  justify-content: center;
+  button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Merriweather Sans Bold';
+    cursor: pointer;
+    &:hover {
+      color: @primary-color;
+    }
+    &.active {
+      color: @primary-color;
+      border-bottom: 2px solid;
+    }
+  }
+}
+.switch-grp {
+  text-align: center;
+  .ant-switch {
+    background-color: @primary-color;
+    padding: 0px 30px;
+    height: 40px;
+    .ant-switch-handle {
+      &::before {
+        border-radius: 50%;
+      }
+      top: 1px;
+      left: 1px;
+      width: 38px;
+      height: 38px;
+    }
+  }
+  .ant-switch-checked .ant-switch-handle {
+    left: calc(100% - 38px - 1px);
+  }
+}
+.ant-form-item-control-input-content {
+  .ant-input {
+    background-color: @light-blue;
+    padding: 2em 1em;
+    font-weight: 500;
+    font-size: 0.9em;
+    border: 0;
+    border-radius: 0.5em;
+    border: 1px solid transparent;
+  }
+}
+.welcome-box {
+  background-color: @light-blue;
+  margin: 3em 0;
+  padding: 3em;
+  border-radius: 10px;
+  h3 {
+    font-size: 1.8em;
+    font-weight: 800;
+    font-family: 'Merriweather Sans Bold';
+  }
+  li {
+    color: #6f7479;
+    list-style: disc;
+  }
+}
+
+.email-verify-succsess {
+  width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}

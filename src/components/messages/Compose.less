@@ -1,0 +1,155 @@
+@import '../../../style/vars.less';
+
+.compose {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  .toolbar-button {
+    color: @grey-color;
+    margin-left: 15px;
+  }
+  .toolbar-button:hover {
+    color: @grey-color;
+  }
+  &.custom {
+    width: 96%;
+    top: unset;
+    left: 2%;
+    bottom: 10px;
+  }
+}
+
+.compose-input {
+  border: none;
+  font-size: 14px;
+  background: none;
+  color: @black;
+  outline: thin;
+  padding: 5px 10px;
+  margin-left: 10px;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  margin-right: 1px;
+}
+
+.compose-input::placeholder {
+  opacity: 0.3;
+}
+
+.grp-icons {
+  padding: 0 10px;
+  cursor: pointer;
+  position: relative;
+  .anticon-send {
+    font-size: 22px;
+    color: #FAB23D;
+  }
+  &.custom {
+    display: flex;
+    .anticon-send {
+      margin-left: 15px;
+    }
+  }
+}
+.grp-send-tip{
+  height: 22px;
+  .anticon-dollar {
+    font-size: 22px;
+    color: #FAB23D;
+  }
+}
+
+.grp-emotions {
+  height: 22px;
+  .anticon-smile {
+    font-size: 22px;
+    color:#FAB23D;
+  }
+  aside.emoji-picker-react {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 50%
+  }
+  &:hover aside.emoji-picker-react {
+    display: flex;
+  }
+}
+
+.grp-pict {
+  height: 22px;
+  .anticon-picture {
+    font-size: 22px;
+    color: #FAB23D;
+  }
+  .avatar-uploader {
+    opacity: 1;
+    .ant-upload {
+      width: auto;
+      height: auto;
+      background: transparent;
+      border: none;
+      margin: 0;
+    }
+  }
+}
+
+.grp-file-icon {
+  background: url('/gallery.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 28px;
+  .avatar-uploader {
+    opacity: 0;
+    .ant-upload {
+      width: auto;
+      height: auto;
+      background: transparent;
+      border: none;
+      margin: 0;
+      img {
+        width: 20px!important;
+        height: 20px;
+        object-fit: cover;
+      }
+    }
+    .ant-upload-text {
+      display: none;
+    }
+  }
+}
+
+.opt{
+  display: flex;
+  align-items: center;
+}
+
+.send {
+  padding-right: 0px;
+  height: 48px;
+  width: 60px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.grp-send {
+  height: 42px;
+  width: 42px;
+  background: #FAB23D;
+  padding: 10px 15px;
+  border-radius: 10px;
+  .anticon-send {
+    font-size: 18px;
+    color: @white;
+    transform: rotate(-45deg);
+  }
+  &:hover {
+    background: #FAB23D;
+  }
+}

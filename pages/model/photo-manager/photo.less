@@ -1,0 +1,58 @@
+.grid-photos {
+  display: inline-block;
+  width: 100%;
+  .grid-item {
+    position: relative;
+    width: 10%;
+    margin-bottom: 2px;
+    float: left;
+    padding: 0 0px;
+    margin: 0 1px;
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      background: #eee;
+    }
+    .select-section {
+      position: absolute;
+      z-index: 10;
+      top: 5px;
+      right: 25px;
+      text-align: center;
+      background-color: #ffffff4d;
+      color: #000;
+    }
+    .remove-section {
+      position: absolute;
+      z-index: 10;
+      top: 5px;
+      right: 5px;
+      text-align: center;
+      background-color: #ffffff4d;
+      color: #000;
+    }
+    .cover-section {
+      position: absolute;
+      z-index: 10;
+      top: 0px;
+      background-color: #ffffff4d;
+      color: #000;
+      text-align: center;
+      left: 0;
+      width: 100%;
+    }
+    @media screen and (max-width: @tablet-screen) {
+      width: 20%;
+    }
+    @media screen and (max-width: @mobile-screen) {
+      width: 33%;
+    }
+    &:first-child {
+      margin-left: 0px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

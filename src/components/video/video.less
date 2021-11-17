@@ -1,0 +1,177 @@
+@import '../../../style/vars.less';
+
+.vid-card:hover {
+  opacity: 0.8;
+}
+.vid-card {
+  box-shadow: 0 4px 16px rgba(0,0,0,.05);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  max-width: 270px;
+  cursor: pointer;
+
+  &:hover .vid-thumb {
+    box-shadow: 0 0 0 0.3rem #FAA61A;
+    border-radius: 20px;
+    @media (max-width: 900px) {
+      box-shadow: unset;
+    }
+  }
+  .vid-thumb {
+    max-width: 270px;
+    position: relative;
+    overflow: hidden;
+    .price {
+      font-family: "GothamGreek", sans-serif;
+      position: absolute;
+      width: 100%;
+      top: 40%;
+      text-align: center;
+      font-size: 16px;
+      line-height: 19px;
+      color: @white;
+      @media screen and (min-width: 756px) and (max-width: 900px) {
+        width: 92%;
+        top: 23%;
+      }
+      @media screen and (min-width: 320px) and (max-width: 400px) {
+        width: 100%;
+        top: 23%;
+      }
+      .textBlur {
+        margin-top: 10px;
+        margin-bottom: 32px;
+      }
+
+      .subscribe {
+        color: @black;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 15px 14px 11px;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        background: #FAA61A;
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+    }
+    .blurImg {
+      .react-blur-canvas {
+        border-radius: 20px;
+        width: 270px !important;
+        height: 270px !important;
+        object-fit: cover;
+        display: block;
+        @media screen and (min-width: 764px) and (max-width: 900px) {
+          width: 222.28px !important;
+          height: 222.28px !important;
+        }
+        @media screen and (min-width: 600px) and (max-width: 764px) {
+          width: 350px !important;
+          height: 350px !important;
+        }
+        @media screen and (min-width: 400px) and (max-width: 600px) {
+          width: 270px !important;
+          height: 270px !important;
+        }
+        @media screen and (min-width: 340px) and (max-width: 400px) {
+          width: 157px !important;
+          height: 157px !important;
+        }
+        @media screen and (min-width: 320px) and (max-width: 330px) {
+          width: 130px !important;
+          height: 130px !important;
+        }
+      }
+    }
+
+    img {
+      border-radius: 20px;
+      width: 100%;
+      max-width: 270px;
+      object-fit: cover;
+    }
+  }
+  .vid-info {
+    font-family: 'Merriweather Sans Bold';
+    color: #323232;
+    background-color: @light-card;
+    padding: 1em;
+    text-align: center;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    @media screen and (max-width: @mobile-screen) {
+      font-size: 11px;
+    }
+  }
+  @media (max-width: 900px) {
+    overflow: hidden;
+  }
+}
+.videojs-player {
+  .video-js {
+    width: 100%;
+    height: 650px;
+    @media screen and (max-width: @tablet-screen) {
+      height: 350px;
+    }
+    @media screen and (max-width: @mobile-screen) {
+      height: 250px;
+    }
+    .vjs-big-play-button {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.vid-footer {
+  font-family: "GothamGreek",sans-serif;
+  color: @white;
+  font-size: 16px;
+  margin: 18px 0 12px;
+  .vid-subfooter {
+    display: flex;
+    justify-content: space-between;
+    span {
+      letter-spacing: -0.08px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    @media (max-width: 736px) {
+      flex-direction: column;
+      span {
+        margin-left: 7px;
+      }
+    }
+  }
+  .vid-name {
+    width: 55%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0 7px;
+  }
+  .performer-name {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    .text-name {
+      margin: 0 7px;
+    }
+    .verified {
+      margin-top: 3px;
+      overflow: visible;
+    }
+    .verified > path {
+      fill: #FAA61A;
+    }
+  }
+}

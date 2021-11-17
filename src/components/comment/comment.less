@@ -1,0 +1,74 @@
+@import '../../../style/vars.less';
+
+.comment-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  .cmt-user {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  .cmt-area {
+    padding: 0 10px;
+    width: 100%;
+    .ant-form-item {
+      margin: 0
+    }
+  }
+  .submit-btn {
+    background-image: linear-gradient(0deg,#773dbd,#6b37aa);
+    color: #fff;
+    -webkit-box-shadow: 0 5px 10px rgba(50,50,50,0.2);
+    box-shadow: 0 5px 10px rgba(50,50,50,0.2);
+    padding: 0.7em 2em;
+    font-size: 0.9em;
+    font-weight: 600;
+    border-radius: 0.5em;
+    height: 40px;
+    .anticon-send {
+      transform: rotate(-45deg);
+    }
+  }
+}
+.cmt-list {
+  .cmt-item {
+    display: flex;
+    margin-bottom: 15px;
+    img {
+      width: 45px;
+      height: 45px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .cmt-user {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 0 10px;
+      .cmt-time {
+        color: #888;
+        font-weight: normal;
+        margin-left: 20px;
+      }
+      .cmt-content {
+        color: #333;
+        font-weight: normal;
+        margin: 0;
+        padding: 3px 10px;
+      }
+    }
+  }
+}
+
+.ant-form-item-control-input-content .ant-input {
+  background-color: @white;
+  color: @black;
+  padding: 4.8px 11px;
+  border: 1px solid #eee
+}

@@ -1,0 +1,49 @@
+
+@import '../../../style/vars.less';
+
+.conversation-list {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+
+  .conversation-list-items {
+    overflow: auto;
+    width: 100%;
+    height: calc(100% - 50px);
+  }
+}
+.user-bl {
+  color: @white;
+  font-size: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 25px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  img {
+    width: 50px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 2px solid @success-color;
+    height: auto;
+    float: left;
+    cursor: pointer;
+    transition: 0.3s border ease;
+    margin-right: 10px;
+  }
+  .user-name{
+    max-width: 200px;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .anticon-setting {
+    font-size: 22px;
+    color: @white;
+    cursor: pointer;
+  }
+}
+
+

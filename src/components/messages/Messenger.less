@@ -1,0 +1,80 @@
+@import '../../../style/vars.less';
+.messenger {
+  width: 100%;
+
+  @media all and (min-width: 768px) {
+    height: 70vh;
+  }
+
+  .ant-layout-header {
+    color: white;
+    height: 50px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+
+    @media all and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .anticon-message {
+    margin-right: 10px;
+    font-size: 22px;
+  }
+
+  .conversation {
+    height: 80vh;
+    overflow: hidden;
+  }
+
+  .message-content {
+    margin: 0;
+    min-height: 100%;
+  }
+}
+
+.scrollable {
+  position: relative;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.chat-content {
+  background: #000;
+  display: flex;
+  width: 100%;
+  padding-bottom: 70px;
+  position: relative;
+  color: @white;
+}
+.close-btn {
+  display: none;
+}
+
+.footer {
+  background: @white;
+}
+
+@media all and (max-width: 768px) {
+  .sidebar {
+    min-width: 100% !important;
+    width: 100% !important;
+  }
+  .sidebar.active {
+    display: none;
+  }
+  .chat-content {
+    display: none;
+  }
+  .chat-content.active {
+    display: flex;
+  }
+  .close-btn.active {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    z-index: 2;
+  }
+}
